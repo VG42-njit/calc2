@@ -19,7 +19,7 @@ def test_calculator_get_result():
     """Testing the Get result method of the calculator"""
     calc = Calculator()
     calc.add_number(1)
-    assert calc.get_result() == 1
+    assert calc.get_result() == 2
 
 def test_calculator_subtract():
     """Testing the subtract method of the calculator"""
