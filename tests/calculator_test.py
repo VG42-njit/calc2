@@ -13,7 +13,7 @@ def test_calculator_add():
     #Act by calling the method to be tested
     calc.add_number(1)
     #Assert that the results are correct
-    assert calc.result == 1
+    assert calc.result == 2
 
 def test_calculator_get_result():
     """Testing the Get result method of the calculator"""
