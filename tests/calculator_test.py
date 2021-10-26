@@ -8,13 +8,13 @@ def test_calculator_add():
     #Act by calling the method to be tested
     calc1.add_number(1)
     #Assert that the results are correct
-    assert calc1.result == 2
+    assert calc1.result == 1
 
 def test_calculator_get_result():
     """Testing the Get result method of the calculator"""
     calc2 = Calculator()
     calc2.add_number(1)
-    assert calc2.get_result() == 2
+    assert calc2.get_result() == 1
 
 def test_calculator_subtract():
     """Testing the subtract method of the calculator"""
