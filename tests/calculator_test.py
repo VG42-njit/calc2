@@ -1,12 +1,8 @@
 import unittest
+import calculator
 
-from calculator.main import Calculator
 
-class TestCalculator(unittest.TestCase):
-  #setUp method is overridden from the parent class TestCase
-  def setUp(self):
-    self.calculator = Calculator()
-  #Each test method starts with the keyword test_
+class TestCalc(unittest.TestCase):
   def test_add(self):
     self.assertEqual(self.calculator.add(4,7), 11)
   def test_subtract(self):
