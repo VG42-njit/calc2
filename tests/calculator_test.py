@@ -1,32 +1,17 @@
-"""Testing the Calculator"""
+import unittest
+
 from calculator.main import Calculator
 
-def test_calculator_add():
-    """Testing the Add function of the calculator"""
-    #Arrange by instantiating the calc class
-    calc1 = Calculator()
-    #Act by calling the method to be tested
-    calc1.add_number(1)
-    #Assert that the results are correct
-    assert calc1.result == 1
-
-def test_calculator_get_result():
-    """Testing the Get result method of the calculator"""
-    calc2 = Calculator()
-    calc2.add_number(1)
-    assert calc2.get_result() == 1
-
-def test_calculator_subtract():
-    """Testing the subtract method of the calculator"""
-    calc3 = Calculator()
-    calc3.subtract_number(0)
-    assert calc3.get_result() == -1
-
-
-
-def test_calculator_multiply():
-    calc4 = Calculator()
-    calc4.multiply_number(1)
-    assert calc4.get_result() == 1
-
-
+class TestCalculator(unittest.TestCase):
+  #setUp method is overridden from the parent class TestCase
+  def setUp(self):
+    self.calculator = Calculator()
+  #Each test method starts with the keyword test_
+  def test_add(self):
+    self.assertEqual(self.calculator.add(4,7), 11)
+  def test_subtract(self):
+    self.assertEqual(self.calculator.subtract(10,5), 5)
+  def test_multiply(self):
+    self.assertEqual(self.calculator.multiply(3,7), 21)
+  def test_divide(self):
+    self.assertEqual(self.calculator.divide(10,2), 5)
