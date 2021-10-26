@@ -1,4 +1,3 @@
-""" This is the increment function"""
 
 class Calculator:
   #empty constructor
