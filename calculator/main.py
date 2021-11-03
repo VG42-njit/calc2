@@ -2,15 +2,13 @@ number_types = (int, float, complex)
 
 
 class Calculator:
-
-    @staticmethod
-    def validate_args(x, y):
-        if not isinstance(x, number_types) and not isinstance(y, number_types):
-            raise ValueError
+    def history_static_property(self,x, y):
+        self.x = x
+        self.y = y
 
     def add(self, x, y):
         self.validate_args(x, y)
-        return x + y
+        return x+y
 
     def multiply(self, x, y):
         self.validate_args(x, y)
@@ -23,3 +21,4 @@ class Calculator:
     def div(self, x, y):
         self.validate_args(x, y)
         return x/y
+
